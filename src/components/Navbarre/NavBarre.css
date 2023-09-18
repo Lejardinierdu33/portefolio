@@ -64,11 +64,13 @@ ul.nav_barre {
   transition: color 0.3s ease;
   margin-right: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 /* Effet de survol */
 .linav:hover {
   color: #ff6600;
+  cursor: pointer;
 }
 
 /* Style pour le lien actif */

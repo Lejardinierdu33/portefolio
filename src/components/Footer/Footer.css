@@ -50,7 +50,8 @@ footer {
 .footer-nav a:hover {
   color: #ff6600; /* Changement de couleur au survol */
   transform: scale(1.1); /* Effet de zoom au survol */
-  transition: color 0.3s, transform 0.3s; /* Animation de transition */
+  transition: color 0.3s, transform 0.3s;
+  cursor: pointer; /* Animation de transition */
 }
 
 /* Styles pour le copyright */
