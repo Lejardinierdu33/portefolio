@@ -1,0 +1,245 @@
+.section_skills {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px 0;
+  flex-wrap: wrap;
+}
+
+
+.section_progressbar {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.section_progressbar h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.section_bar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.skill-item {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.skill-label {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* HTML Progress Bar */
+.html_progressbar .progress-bar {
+  animation: fillToLeftHTML 3s linear forwards;
+  background-color: #ff6600;
+}
+
+@keyframes fillToLeftHTML {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+/* CSS Progress Bar */
+.css_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftCSS 3s linear forwards;
+}
+
+@keyframes fillToLeftCSS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+/* JavaScript Progress Bar */
+.javascript_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftJS 3s linear forwards;
+}
+
+@keyframes fillToLeftJS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+/* React Progress Bar */
+.react_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftReact 3s linear forwards;
+}
+
+@keyframes fillToLeftReact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* Node.js Progress Bar */
+.nodejs_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftNode 3s linear forwards;
+}
+
+@keyframes fillToLeftNode {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+/* PHP Progress Bar */
+.php_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftPHP 3s linear forwards;
+}
+
+@keyframes fillToLeftPHP {
+  from {
+    width: 0;
+  }
+  to {
+    width: 55%;
+  }
+}
+
+/* WordPress Progress Bar */
+.wordpress_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftWordPress 3s linear forwards;
+}
+
+@keyframes fillToLeftWordPress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+/* Flutter Progress Bar */
+.flutter_progressbar .progress-bar {
+  background-color: #ff6600;
+  animation: fillToLeftFlutter 3s linear forwards;
+}
+
+@keyframes fillToLeftFlutter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+.section_experiences {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.section_experiences h2 {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Exp */
+
+.section_allexp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section_exp {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.section_exp_left {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.section_exp_left hr {
+  width: 100px;
+  vertical-align: right;
+  border: 2px solid #ff6600;
+}
+
+.section_exp_right {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section_exp_right h2 {
+  color: #ff6600;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.section_exp_right p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .section_skills {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section_progressbar {
+    width: 70%;
+  }
+  .section_experiences {
+    width: 70%;
+  }
+}

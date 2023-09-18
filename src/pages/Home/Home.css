@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+header {
+  background-image: url("../../img/pc_bureau.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.header::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.header_title {
+  z-index: 20;
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  top: 280px;
+  left: 200px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header_title hr {
+  border: 2px solid #000;
+  width: 200px;
+}
+
+.header_title h1 {
+  color: #000;
+  font-size: 3.5rem;
+}
+
+.header_title .text_title {
+  color: #ff6600;
+}
+
+.number_mail {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 10px 0;
+  gap: 25px;
+}
+
+.text_coo {
+  color: black;
+  display: flex;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.text_coo a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 640px){
+  .header_title {
+    left: 200px;
+    font-size: 1.5rem;
+  }
+
+  .header_title h1 {
+    font-size: 2rem;
+  }
+
+  .text_coo {
+    font-size: 0.8rem;
+    width: 200px;
+  }
+}

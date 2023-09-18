@@ -1,0 +1,25 @@
+.scroll_image_section {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-image: url('../../img/ecran_pc.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.scroll_image_section h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    width: 450px;
+    padding-left: 100px;
+}

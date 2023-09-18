@@ -1,0 +1,42 @@
+/* Styles pour le conteneur du carousel */
+.portfolio-carousel {
+  max-width: 800px; /* Ajustez la largeur maximale selon vos besoins */
+  margin: 0 auto;
+  text-align: center;
+  padding: 150px 0;
+}
+
+/* Styles pour le titre du carousel */
+.carousel-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff6600;
+}
+
+.portfolio-carousel p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Styles pour les images du carousel */
+.carousel-image {
+  max-width: 100%; /* Ajustez les dimensions des images */
+  height: auto;
+}
+
+/* Styles pour la description sous les images */
+.carousel-description {
+  font-size: 18px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Styles pour les flèches de navigation du carousel (si besoin) */
+.carousel-root .control-arrow {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 24px;
+}

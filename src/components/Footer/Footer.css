@@ -1,0 +1,77 @@
+/* Styles pour le conteneur du pied de page */
+footer {
+  background-color: #fff; /* Fond blanc */
+  border-top: 2px solid #ff6600; /* Bordure en haut de couleur #ff6600 */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+
+/* Styles pour le conteneur du contenu du pied de page */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Styles pour le logo */
+.footer-logo img {
+  max-width: 100px; /* Ajustez la taille du logo selon vos besoins */
+}
+
+/* Styles pour la navigation */
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.footer-nav li {
+  margin-left: 20px; /* Espacement entre les éléments de la navigation */
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333; /* Couleur du texte de la navigation */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-nav a:hover {
+  color: #ff6600; /* Changement de couleur au survol */
+  transform: scale(1.1); /* Effet de zoom au survol */
+  transition: color 0.3s, transform 0.3s; /* Animation de transition */
+}
+
+/* Styles pour le copyright */
+.footer-copyright {
+  margin-top: 20px; /* Espacement entre le contenu et le copyright */
+  font-size: 14px;
+  color: #666; /* Couleur du texte du copyright */
+}
+
+/* Média query pour rendre la navigation alignée à gauche sur les petits écrans */
+@media (max-width: 768px) {
+  .footer-nav {
+    margin-top: 20px; /* Espacement entre le logo et la navigation */
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+
+  .footer-nav li {
+    margin: 0 10px; /* Espacement entre les éléments de la navigation */
+  }
+}

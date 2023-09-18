@@ -1,0 +1,66 @@
+/* Contact.css (ou votre fichier CSS personnalisé) */
+.contact-container {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  background-image: url('../../img/mail_picture.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.contact-container::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 20;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-content h1 {
+  color: #ff6600;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.contact-container p {
+  font-size: 1.5rem;
+}
+
+.contact-container a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ff66008a;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #ff6600;
+}
+
+.cookies {
+  display: none;
+}
+
