@@ -3,64 +3,81 @@ import logo from "../../img/png_logo_black.png";
 import { NavLink } from "react-router-dom";
 
 function NavBarre() {
-    const [scrolled, setScrolled] = useState(false);
-    const [activeSection, setActiveSection] = useState(""); // État pour la section active
-  
-    useEffect(() => {
-      // Fonction pour vérifier le défilement de la page
-      function checkScroll() {
-        if (window.scrollY > 0) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-  
-        // Vérifier la position du défilement et définir la section active
-        const cvSection = document.getElementById("cv");
-        const skillsSection = document.getElementById("skills");
-        const mesOffresSection = document.getElementById("mesoffres");
-        const portefolioSection = document.getElementById("portefolio");
-        const contactSection = document.getElementById("contact");
-  
-        if (
-          cvSection &&
-          skillsSection &&
-          mesOffresSection &&
-          portefolioSection &&
-          contactSection
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // État pour le menu burger
+
+  useEffect(() => {
+    // Fonction pour vérifier le défilement de la page
+    function checkScroll() {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+      // Vérifier la position du défilement et définir la section active
+      const cvSection = document.getElementById("cv");
+      const skillsSection = document.getElementById("skills");
+      const mesOffresSection = document.getElementById("mesoffres");
+      const portefolioSection = document.getElementById("portefolio");
+      const contactSection = document.getElementById("contact");
+
+      if (
+        cvSection &&
+        skillsSection &&
+        mesOffresSection &&
+        portefolioSection &&
+        contactSection
+      ) {
+        const cvOffset = cvSection.offsetTop;
+        const skillsOffset = skillsSection.offsetTop;
+        const mesOffresOffset = mesOffresSection.offsetTop;
+        const portefolioOffset = portefolioSection.offsetTop;
+        const contactOffset = contactSection.offsetTop;
+        const currentScroll = window.scrollY;
+
+        if (currentScroll >= cvOffset && currentScroll < skillsOffset) {
+          setActiveSection("cv");
+        } else if (
+          currentScroll >= skillsOffset &&
+          currentScroll < mesOffresOffset
         ) {
-          const cvOffset = cvSection.offsetTop;
-          const skillsOffset = skillsSection.offsetTop;
-          const mesOffresOffset = mesOffresSection.offsetTop;
-          const portefolioOffset = portefolioSection.offsetTop;
-          const contactOffset = contactSection.offsetTop;
-          const currentScroll = window.scrollY;
-  
-          if (currentScroll >= cvOffset && currentScroll < skillsOffset) {
-            setActiveSection("cv");
-          } else if (
-            currentScroll >= skillsOffset &&
-            currentScroll < mesOffresOffset
-          ) {
-            setActiveSection("skills");
-          } else if (currentScroll >= mesOffresOffset && currentScroll < portefolioOffset) {
-            setActiveSection("mesoffres");
-          } else if (currentScroll >= portefolioOffset && currentScroll < contactOffset) {
-            setActiveSection("portefolio");
-          } else if (currentScroll >= contactOffset) {
-            setActiveSection("contact");
-          } else {
-            setActiveSection("");
-          }
+          setActiveSection("skills");
+        } else if (
+          currentScroll >= mesOffresOffset &&
+          currentScroll < portefolioOffset
+        ) {
+          setActiveSection("mesoffres");
+        } else if (
+          currentScroll >= portefolioOffset &&
+          currentScroll < contactOffset
+        ) {
+          setActiveSection("portefolio");
+        } else if (currentScroll >= contactOffset) {
+          setActiveSection("contact");
+        } else {
+          setActiveSection("");
         }
       }
-  
-      window.addEventListener("scroll", checkScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", checkScroll);
-      };
-    }, []);
+    }
+
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
+
+  // Gérer le clic sur le bouton du menu hamburger
+  const handleMenuClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Gérer le clic sur un lien du menu
+  const handleNavLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <div>
@@ -69,10 +86,24 @@ function NavBarre() {
           <img src={logo} alt="logo léo Ségalini" />
         </div>
 
-        <ul className="nav_barre">
+        {/* Bouton du menu hamburger */}
+        <div
+          className={`icons_burger ${isMenuOpen ? "open" : ""}`}
+          onClick={handleMenuClick}
+        >
+          <div className={`menu-icon ${isMenuOpen ? "open" : ""}`}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+        </div>
+
+        {/* Menu de navigation */}
+        <ul className={`nav_barre ${isMenuOpen ? "active" : ""}`}>
           <NavLink
             to={"/"}
             className={`linav ${activeSection === "accueil" ? "active" : ""}`}
+            onClick={handleNavLinkClick}
           >
             Accueil
           </NavLink>
@@ -80,8 +111,9 @@ function NavBarre() {
             <a
               href="#cv"
               className={`linav ${activeSection === "cv" ? "active" : ""}`}
+              onClick={handleNavLinkClick}
             >
-              Me découvrir
+              Découvrir
             </a>
           </li>
           <li className="linav">
@@ -99,7 +131,7 @@ function NavBarre() {
                 activeSection === "mesoffres" ? "active" : ""
               }`}
             >
-              Mes Offres
+              Offres
             </a>
           </li>
           <li className="linav">

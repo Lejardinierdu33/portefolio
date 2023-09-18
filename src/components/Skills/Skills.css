@@ -174,7 +174,7 @@
 
 .section_experiences h2 {
   text-align: left;
-  font-size: 2.5rem;
+  font-size: calc(0.5 + 1.5vw);
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -201,7 +201,7 @@
   width: 25%;
   align-items: center;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: calc(0.5 + 1vw);
 }
 
 .section_exp_left hr {
@@ -220,11 +220,11 @@
 .section_exp_right h2 {
   color: #ff6600;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: calc(0.5rem + 1.5vw);
 }
 
 .section_exp_right p {
-  font-size: 1rem;
+  font-size: calc(0.5rem + 0.5vw);
   text-align: center;
 }
 
@@ -241,5 +241,13 @@
   }
   .section_experiences {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .section_exp {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }

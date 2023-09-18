@@ -10,7 +10,7 @@
 }
 
 /* Styles pour la barre de navigation */
-nav {
+.nav {
   color: #333;
   padding: 10px 0;
   display: flex;
@@ -21,7 +21,7 @@ nav {
   z-index: 999;
   width: 100%;
   height: 150px;
-  font-size: 1.5rem;
+  font-size: calc(0.5rem + 1vw);
   text-align: center;
 }
 
@@ -38,22 +38,49 @@ nav {
 /* Style pour le logo */
 .image_logo {
   height: 100%;
+  width: auto;
 }
 
 .image_logo img {
-  max-width: 95%;
+  width: 95%;
   height: 95%;
   margin-left: 20px;
 }
 
-/* Styles pour la liste de navigation */
-ul.nav_barre {
+/* Style pour le bouton du menu hamburger */
+.icons_burger {
+  cursor: pointer;
+  display: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Style pour le menu de navigation */
+.nav_barre {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
   width: 60%;
+  transition: left 0.25s;
+  position: relative;
 }
 
 /* Style pour les liens de navigation */
@@ -75,6 +102,61 @@ ul.nav_barre {
 
 /* Style pour le lien actif */
 .linav.active {
-  color: #ff6600; /* Couleur du lien actif */
-  font-weight: bold; /* Style de police pour le lien actif */
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 750px) {
+  /* Affichage du bouton du menu hamburger */
+.nav {
+  justify-content: space-between;
+}
+
+  .icons_burger {
+    display: block;
+    padding-right: 40px;
+  }
+
+  .nav_barre {
+    display: none;
+  }
+
+  /* Style pour le menu de navigation lorsqu'il est ouvert */
+  .nav_barre.active {
+    display: block;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Style pour les liens du menu de navigation */
+  .linav {
+    padding: 15px 0;
+  }
+
+  /* Style pour le survol des liens du menu */
+  .linav:hover {
+    background-color: #ff6600;
+  }
+
+  /* Style pour les barres de l'icône du menu hamburger */
+  .icons_burger.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-4px, 3px);
+  }
+
+  .icons_burger.open .bar:nth-child(2) {
+    transform: rotate(45deg) translate(-4px, -3px);
+  }
+
+  .icons_burger.open .bar:nth-child(3) {
+    opacity: 0;
+  }
 }

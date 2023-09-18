@@ -98,3 +98,36 @@
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+@media screen and (max-width: 400px) {
+
+    .proposition_title {
+        font-size: 1rem;
+    }
+    
+    .proposition_title h2 {
+        font-size: 1.5rem;
+    }
+    .proposition_content_item_block {
+        height: 250px;
+        width: 350px;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding-left: 10px;
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    
+    .proposition_content_item_icon {
+        font-size: 1rem;
+    }
+
+    .proposition_content_item_title h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .proposition_content_item_title p {
+        font-size: 0.8rem;
+    }
+}
