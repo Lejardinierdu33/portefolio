@@ -54,7 +54,7 @@ header {
 .number_mail {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 450px;
   margin: 10px 0;
   gap: 25px;
 }
