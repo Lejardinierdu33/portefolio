@@ -20,28 +20,47 @@ function Caroussel() {
         showThumbs={false}
         stopOnHover={true}
       >
-         <div>
+        <div>
           <img src={WordPress} alt="Movie API" className="carousel-image" />
-          <p className="carousel-description">WordPress + PHP</p>
+          <p className="carousel-description">
+            Portefolio Word Press, manipulation de WordPress et de PHP.
+          </p>
         </div>
         <div>
           <img src={MovieApi} alt="Movie API" className="carousel-image" />
-          <p className="carousel-description">API + REACT</p>
+          <p className="carousel-description">
+            Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
+            la possibilité de rechercher son film avec la description, note..etc
+          </p>
         </div>
         <div>
           <img src={Rick} alt="Rick et Morty API" className="carousel-image" />
-          <p className="carousel-description">API + REACT</p>
+          <p className="carousel-description">
+            Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
+            la possibilité de rechercher l'état de vie, le lieu de naissance ou
+            tout autre informations concernant tous les personnages de Rick et
+            Morty.
+          </p>
         </div>
         <div>
           <img src={Pokemon} alt="Pokemon API" className="carousel-image" />
-          <p className="carousel-description">API + REACT</p>
+          <p className="carousel-description">
+            Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
+            la possibilité de rechercher chaque Pokémon par génération, hp,
+            attaque, defense..etc
+          </p>
         </div>
-        
+
         <div>
           <img src={Geo} alt="Movie API" className="carousel-image" />
-          <p className="carousel-description">API + REACT</p>
+          <p className="carousel-description">
+            Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
+            la possibilité de rechercher chaque pays dans le monde, de cliquer
+            dessus pour être renvoyer sur google maps et le situé, le nombre de
+            personne. Objectif est d'aider les enfants dans l'apprentissage de
+            la géographie.
+          </p>
         </div>
-       
       </Carousel>
     </div>
   );

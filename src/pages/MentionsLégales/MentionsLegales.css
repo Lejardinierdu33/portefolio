@@ -1,0 +1,84 @@
+.section_mention_legales {
+    background-color: rgba(218, 209, 209, 0.664);
+}
+
+.start_mention_legales{
+    padding: 200px 20px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav_mention_legales {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+}
+
+.nml_link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+.nml_link:hover {
+    color: #ff6600;
+    cursor: pointer;
+}
+
+.nav_mention_legales img {
+    height: 100%;
+    width: auto;
+}
+
+.start_mention_legales h1 {
+    text-align: center;
+    font-size: calc(0.5rem + 1.5vw);
+    font-weight: bold;
+}
+
+.coordonnees_section h2{
+    font-size: calc(0.5rem + 1.2vw);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.coordonnees_section  p {
+    font-size: calc(0.5rem + 0.8vw);
+}
+
+.mention_propriéte h2{
+    font-size: calc(0.5rem + 1.2vw);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.mention_propriéte p {
+    font-size: calc(0.5rem + 0.8vw);
+}
+
+.mention_propriéte a {
+    list-style: none;
+    text-decoration: none;
+    color: #ff6600a8;
+}
+
+.mention_propriéte a:hover {
+    color: #ff6600;
+}
+
+.coordonees_hebergeur h2{
+    font-size: calc(0.5rem + 1.2vw);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.coordonees_hebergeur p {
+    font-size: calc(0.5rem + 0.8vw);
+}

@@ -13,6 +13,7 @@ import "./components/Scrollimage/ScrollImg.css";
 import "./components/Caroussel/Caroussel.css";
 import "./components/Footer/Footer.css";
 import "./components/ScrollToTopButton/ScrollToTopButton.css";
+import "./pages/MentionsLégales/MentionsLegales.css";
 
 
 

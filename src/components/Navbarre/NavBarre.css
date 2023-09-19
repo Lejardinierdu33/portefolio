@@ -126,15 +126,18 @@
   .nav_barre.active {
     display: block;
     position: fixed;
-    top: 100px;
+    top: 0px;
     right: 0;
     display: flex;
     flex-direction: column;
-    width: 250px;
-    background-color: aliceblue;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
     align-items: center;
     text-align: center;
+    z-index: 0;
   }
 
   /* Style pour les liens du menu de navigation */
@@ -145,6 +148,11 @@
   /* Style pour le survol des liens du menu */
   .linav:hover {
     background-color: #ff6600;
+  }
+
+  .menu-icon {
+    position: relative;
+    z-index: 20;
   }
 
   /* Style pour les barres de l'icône du menu hamburger */
