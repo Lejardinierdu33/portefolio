@@ -2,10 +2,11 @@
 .contact-container {
   display: flex;
   height: 600px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px;
+  padding: 50px 0;
   background-image: url('../../img/mail_picture.webp');
   background-position: center center;
   background-repeat: no-repeat;
@@ -27,25 +28,23 @@
 }
 
 .contact-content {
-  position: relative;
   z-index: 20;
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 1200px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .contact-content h1 {
   color: #ff6600;
   font-weight: bold;
-  font-size: calc(1rem + 2vw);
+  font-size: 45px;
 }
 
 .contact-container p {
-  font-size: calc(1rem + 1vw);
+  font-size: 30px;
 }
 
 .contact-container a {
@@ -65,8 +64,32 @@
 }
 
 
-@media (max-width: 315px) {
+@media screen and (max-width: 1200px) {
+  
+  .contact-content {
+    width: 765px;
+  }
+  
+  .contact-content h1 {
+    font-size: 35px;
+  }
+  
+  .contact-container p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .contact-content {
     width: auto;
+    padding: 0 10px;
+  }
+  
+  .contact-content h1 {
+    font-size: 20px;
+  }
+  
+  .contact-container p {
+    font-size: 15px;
   }
 }

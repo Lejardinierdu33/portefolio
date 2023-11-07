@@ -9,20 +9,28 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* Styles pour la barre de navigation */
 .nav {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+}
+
+/* Styles pour la barre de navigation */
+nav {
+  width: 1200px;
   color: #333;
   padding: 10px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-  height: 150px;
-  font-size: calc(0.5rem + 1vw);
+  font-size: 25px;
   text-align: center;
+  height: 150px;
 }
 
 .initial-bg {
@@ -43,15 +51,14 @@
 
 .image_logo img {
   width: 95%;
-  height: 95%;
-  margin-left: 20px;
+  height: 100%;
 }
 
 /* Style pour le bouton du menu hamburger */
 .icons_burger {
   cursor: pointer;
   display: none;
-  font-size: 2rem;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -78,7 +85,6 @@
   padding: 0;
   display: flex;
   justify-content: space-around;
-  width: 60%;
   transition: left 0.25s;
   position: relative;
 }
@@ -108,17 +114,30 @@
   background-color: transparent;
 }
 
-/* Media query pour les écrans plus petits */
-@media (max-width: 750px) {
-  /* Affichage du bouton du menu hamburger */
-.nav {
-  justify-content: space-between;
-  width: 100%;
+@media (max-width: 1200px) {
+  /* Styles pour la barre de navigation */
+  nav {
+    width: 765px;
+    font-size: 20px;
+  }
+
+  /* Style pour le bouton du menu hamburger */
+  .icons_burger {
+    font-size: 25px;
+  }
 }
+
+/* Media query pour les écrans plus petits */
+@media (max-width: 850px) {
+  /* Affichage du bouton du menu hamburger */
+  nav {
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+  }
 
   .icons_burger {
     display: block;
-    padding-right: 40px;
   }
 
   .nav_barre {
@@ -135,7 +154,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 20px;
     background-color: rgb(255, 255, 255);
     justify-content: space-around;
     align-items: center;

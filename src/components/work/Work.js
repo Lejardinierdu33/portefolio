@@ -12,36 +12,47 @@ function Work() {
   const iconColor = "#ff6600";
 
   return (
-    <div className="section_counter">
-      <Fade className="fade_left">
-        <div className="counter_projet">
-          <div id="counterProjet"></div>
-          <FaLaptopCode
-            className="counter_icon"
-            style={{ color: iconColor }}
-          />{" "}
-          Projets Réalisés
-        </div>
+    <div className="section_counter_all">
+      <div className="section_counter">
+        <Fade className="fade_left">
+          <div className="counter_projet">
+            <div id="counterProjet"></div>
+            <FaLaptopCode
+              className="counter_icon"
+              style={{ color: iconColor }}
+            />{" "}
+            Projets Réalisés
+          </div>
 
-        <div className="counter_hours">
-          <div id="counterHours"></div>
-          <FaClock className="counter_icon" style={{ color: iconColor }} />{" "}
-          Nombre d'heure
-        </div>
-      </Fade>
-      <Fade className="fade_right">
-        <div className="counter_night">
-          <div id="counterNight"></div>
-          <FaMoon className="counter_icon" style={{ color: iconColor }} /> Nuits
-          Blanche
-        </div>
+          <div className="counter_hours">
+            <div id="counterHours"></div>
+            <FaClock
+              className="counter_icon"
+              style={{ color: iconColor }}
+            />{" "}
+            Nombre d'heure
+          </div>
+        </Fade>
+        <Fade className="fade_right">
+          <div className="counter_night">
+            <div id="counterNight"></div>
+            <FaMoon
+              className="counter_icon"
+              style={{ color: iconColor }}
+            />{" "}
+            Nuits Blanche
+          </div>
 
-        <div className="counter_client">
-          <div id="counterClient"></div>
-          <FaUsers className="counter_icon" style={{ color: iconColor }} />{" "}
-          Nombre de Client
-        </div>
-      </Fade>
+          <div className="counter_client">
+            <div id="counterClient"></div>
+            <FaUsers
+              className="counter_icon"
+              style={{ color: iconColor }}
+            />{" "}
+            Nombre de Client
+          </div>
+        </Fade>
+      </div>
     </div>
   );
 }

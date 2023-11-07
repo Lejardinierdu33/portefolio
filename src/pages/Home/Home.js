@@ -38,7 +38,8 @@ function Home() {
               </div>
               <div className="text_coo">
                 <a href="https://github.com/Lejardinierdu33">
-                  <FaGithub style={{ color: iconColor }} /> https://github.com/Lejardinierdu33
+                  <FaGithub style={{ color: iconColor }} />{" "}
+                  https://github.com/Lejardinierdu33
                 </a>
               </div>
             </div>

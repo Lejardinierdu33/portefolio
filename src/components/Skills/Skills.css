@@ -1,16 +1,23 @@
-.section_skills {
+
+.section_all_skills {
   width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.section_skills {
+  width: 1200px;
   height: auto;
   display: flex;
   justify-content: center;
   gap: 50px;
   padding: 100px 0;
-  flex-wrap: wrap;
 }
 
 
 .section_progressbar {
-  width: 30%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -21,7 +28,7 @@
 }
 
 .section_progressbar h2 {
-  font-size: 2.5rem;
+  font-size: 30px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -30,7 +37,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  font-size: 1.5rem;
+  font-size: 25px;
 }
 
 .skill-item {
@@ -40,7 +47,7 @@
 
 .skill-label {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 18px;
 }
 
 /* HTML Progress Bar */
@@ -164,7 +171,7 @@
 }
 
 .section_experiences {
-  width: 40%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -174,7 +181,7 @@
 
 .section_experiences h2 {
   text-align: left;
-  font-size: calc(0.5 + 1.5vw);
+  font-size: 30px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -201,7 +208,7 @@
   width: 25%;
   align-items: center;
   text-align: center;
-  font-size: calc(0.5 + 1vw);
+  font-size: 15px;
 }
 
 .section_exp_left hr {
@@ -220,34 +227,54 @@
 .section_exp_right h2 {
   color: #ff6600;
   text-align: center;
-  font-size: calc(0.5rem + 1.5vw);
+  font-size: 18px;
 }
 
 .section_exp_right p {
-  font-size: calc(0.5rem + 0.5vw);
+  font-size: 15px;
   text-align: center;
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+  
   .section_skills {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 765px;
+    gap: 30px;
   }
-
+  
+  
   .section_progressbar {
-    width: 70%;
-  }
-  .section_experiences {
-    width: 70%;
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 440px) {
-  .section_exp {
-    flex-wrap: wrap;
+@media screen and (max-width: 850px) {
+  
+  .section_skills {
+    width: auto;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 100px 15px;
+  }
+  
+  
+  .section_progressbar {
+    width: 100%;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .section_bar {
+    gap: 5px;
+  }
+
+  .section_experiences {
+    width: 100%;
+  }
+  
+  .section_experiences h2 {
+    text-align: center;
   }
 }

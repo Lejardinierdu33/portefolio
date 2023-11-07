@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../img/png_logo_black.webp";
-import { NavLink } from "react-router-dom";
 
 function NavBarre() {
   const [scrolled, setScrolled] = useState(false);
@@ -80,8 +79,8 @@ function NavBarre() {
   };
 
   return (
-    <div>
-      <nav className={`nav ${scrolled ? "scrolled-bg" : "initial-bg"}`}>
+    <div className={`nav ${scrolled ? "scrolled-bg" : "initial-bg"}`}>
+      <nav>
         <div className="image_logo">
           <img src={logo} alt="logo léo Ségalini" />
         </div>
@@ -100,13 +99,6 @@ function NavBarre() {
 
         {/* Menu de navigation */}
         <ul className={`nav_barre ${isMenuOpen ? "active" : ""}`}>
-          <NavLink
-            to={"/"}
-            className={`linav ${activeSection === "accueil" ? "active" : ""}`}
-            onClick={handleNavLinkClick}
-          >
-            Accueil
-          </NavLink>
           <li className="linav">
             <a
               href="#cv"
@@ -147,9 +139,7 @@ function NavBarre() {
           <li className="linav">
             <a
               href="#contact"
-              className={`linav ${
-                activeSection === "contact" ? "active" : ""
-              }`}
+              className={`linav ${activeSection === "contact" ? "active" : ""}`}
             >
               Contact
             </a>
