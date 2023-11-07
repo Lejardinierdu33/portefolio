@@ -1,11 +1,15 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Rick from "../../img/site_img/API Rick et Morty.png";
-import Pokemon from "../../img/site_img/API Pokemon.png";
-import MovieApi from "../../img/site_img/Trouves ton film.png";
-import Geo from "../../img/site_img/La Geo pour les nuls.png";
-import WordPress from "../../img/site_img/WordPressFolio.png";
+import Rick from "../../img/site_img/API-Rick-et-Morty.webp";
+import Pokemon from "../../img/site_img/API-Pokemon.webp";
+import MovieApi from "../../img/site_img/Trouves-ton-film.webp";
+import Geo from "../../img/site_img/La-Geo-pour-les-nuls.webp";
+import WPPortefolio from "../../img/site_img/WordPressFolio.webp";
+import WPAyoka from "../../img/site_img/WordPress-Ayoka.webp";
+import WPSpa from "../../img/site_img/WordPress-SpaByNoom.webp";
+import WPMayotte from "../../img/site_img/WordPress-Mayotte-Fourniture.webp";
+import FlutterHalal from "../../img/site_img/Flutter-Halal-Reunion-_1_.webp";
 
 function Caroussel() {
   return (
@@ -21,9 +25,33 @@ function Caroussel() {
         stopOnHover={true}
       >
         <div>
-          <img src={WordPress} alt="Movie API" className="carousel-image" />
+          <img src={FlutterHalal} alt="Flutter Halal Réunion" className="carousel-image" />
+          <p className="carousel-description">
+            Application en flutter pour Halal Réunion.
+          </p>
+        </div>
+        <div>
+          <img src={WPPortefolio} alt="Word Press Portefolio" className="carousel-image" />
           <p className="carousel-description">
             Portefolio Word Press, manipulation de WordPress et de PHP.
+          </p>
+        </div>
+        <div>
+          <img src={WPAyoka} alt="Word Press Ayoka" className="carousel-image" />
+          <p className="carousel-description">
+            Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc.
+          </p>
+        </div>
+        <div>
+          <img src={WPMayotte} alt="Word Press Mayotte Fourniture" className="carousel-image" />
+          <p className="carousel-description">
+            Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc et Woocommerce .
+          </p>
+        </div>
+        <div>
+          <img src={WPSpa} alt="Word Press SpaByNoom" className="carousel-image" />
+          <p className="carousel-description">
+          Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc.
           </p>
         </div>
         <div>

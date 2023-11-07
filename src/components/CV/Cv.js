@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../../img/Avatar_noBG.png";
+import Avatar from "../../img/Avatar_noBG.webp";
 import { Fade } from "react-awesome-reveal";
 
 function Cv() {

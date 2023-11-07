@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../img/png_logo_black.png";
+import logo from "../../img/png_logo_black.webp";
 import { NavLink } from "react-router-dom";
 
 function NavBarre() {
