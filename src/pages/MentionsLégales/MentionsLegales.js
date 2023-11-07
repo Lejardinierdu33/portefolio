@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import { NavLink } from "react-router-dom";
-import logo from "../../img/png_logo_black.png";
+import logo from "../../img/png_logo_black.webp";
 
 function MentionsLegales() {
   return (
