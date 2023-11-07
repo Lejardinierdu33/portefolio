@@ -25,6 +25,11 @@
   max-width: 100%; /* Ajustez les dimensions des images */
   height: auto;
 }
+/* 
+.halal_reunion_img {
+  height: 200px;
+  width: 50px;
+} */
 
 /* Styles pour la description sous les images */
 .carousel-description {

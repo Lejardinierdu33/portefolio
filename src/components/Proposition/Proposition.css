@@ -110,7 +110,7 @@
     }
     .proposition_content_item_block {
         height: 250px;
-        width: 350px;
+        width: auto;
         display: flex;
         flex-direction: row;
         gap: 30px;

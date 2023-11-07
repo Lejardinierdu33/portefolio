@@ -9,9 +9,16 @@ import WPPortefolio from "../../img/site_img/WordPressFolio.webp";
 import WPAyoka from "../../img/site_img/WordPress-Ayoka.webp";
 import WPSpa from "../../img/site_img/WordPress-SpaByNoom.webp";
 import WPMayotte from "../../img/site_img/WordPress-Mayotte-Fourniture.webp";
-import FlutterHalal from "../../img/site_img/Flutter-Halal-Reunion-_1_.webp";
+// import FlutterHalal from "../../img/site_img/Flutter-Halal-Reunion-_1_.webp";
 
 function Caroussel() {
+
+  const redirectToUrl = (url) => {
+    window.open(url, "_blank"); // Ouvrez l'URL dans un nouvel onglet
+    // Ou utilisez la ligne suivante pour rediriger dans la même fenêtre
+    // window.location.href = url;
+  };
+
   return (
     <div className="portfolio-carousel" id="portefolio">
       <h2 className="carousel-title">Mon Portefolio</h2>
@@ -24,44 +31,44 @@ function Caroussel() {
         showThumbs={false}
         stopOnHover={true}
       >
-        <div>
-          <img src={FlutterHalal} alt="Flutter Halal Réunion" className="carousel-image" />
+        {/* <div>
+          <img src={FlutterHalal} alt="Flutter Halal Réunion" className="halal_reunion_img" id="halal_reunion_img"/>
           <p className="carousel-description">
             Application en flutter pour Halal Réunion.
           </p>
-        </div>
-        <div>
+        </div> */}
+        <div onClick={() => redirectToUrl("https://leosegalini-portefolio.netlify.app/")}>
           <img src={WPPortefolio} alt="Word Press Portefolio" className="carousel-image" />
           <p className="carousel-description">
             Portefolio Word Press, manipulation de WordPress et de PHP.
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://ayokarestaurant.ci/")}>
           <img src={WPAyoka} alt="Word Press Ayoka" className="carousel-image" />
           <p className="carousel-description">
             Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc.
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://mayottefournitures.yt/")}>
           <img src={WPMayotte} alt="Word Press Mayotte Fourniture" className="carousel-image" />
           <p className="carousel-description">
             Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc et Woocommerce .
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://spabynoom.ci/")}>
           <img src={WPSpa} alt="Word Press SpaByNoom" className="carousel-image" />
           <p className="carousel-description">
           Word Press, manipulation de WordPress, Elementor Pro, CrocoBloc.
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://api-movie-found.netlify.app/")}>
           <img src={MovieApi} alt="Movie API" className="carousel-image" />
           <p className="carousel-description">
             Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
             la possibilité de rechercher son film avec la description, note..etc
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://rick-et-morty-api.netlify.app/")}>
           <img src={Rick} alt="Rick et Morty API" className="carousel-image" />
           <p className="carousel-description">
             Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
@@ -70,7 +77,7 @@ function Caroussel() {
             Morty.
           </p>
         </div>
-        <div>
+        <div onClick={() => redirectToUrl("https://api-pokemon-team.netlify.app/")}>
           <img src={Pokemon} alt="Pokemon API" className="carousel-image" />
           <p className="carousel-description">
             Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir
@@ -79,7 +86,7 @@ function Caroussel() {
           </p>
         </div>
 
-        <div>
+        <div onClick={() => redirectToUrl("https://geo-pour-les-nuls.netlify.app/")}>
           <img src={Geo} alt="Movie API" className="carousel-image" />
           <p className="carousel-description">
             Site créé avec REACT et la gestion d'une API, l'objectif est d'avoir

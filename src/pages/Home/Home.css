@@ -59,6 +59,7 @@ header {
   gap: 25px;
 }
 
+
 .text_coo {
   color: black;
   display: flex;
@@ -93,6 +94,7 @@ header {
   .number_mail {
     align-items: center;
     justify-content: center;
+    width: auto;
   }
 
   .text_coo {

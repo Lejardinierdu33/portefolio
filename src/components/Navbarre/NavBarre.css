@@ -98,12 +98,14 @@
 .linav:hover {
   color: #ff6600;
   cursor: pointer;
+  background-color: transparent;
 }
 
 /* Style pour le lien actif */
 .linav.active {
   color: #ff6600;
   font-weight: bold;
+  background-color: transparent;
 }
 
 /* Media query pour les écrans plus petits */
@@ -144,11 +146,6 @@
   /* Style pour les liens du menu de navigation */
   .linav {
     padding: 15px 0;
-  }
-
-  /* Style pour le survol des liens du menu */
-  .linav:hover {
-    background-color: #ff6600;
   }
 
   .menu-icon {
