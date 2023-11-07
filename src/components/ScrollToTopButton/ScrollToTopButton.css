@@ -21,4 +21,10 @@
   .scroll-to-top:hover {
     background-color: #e04b00;
   }
+
+  @media (max-width: 400px) {
+    .scroll-to-top {
+      display: none;
+    }
+  }
   

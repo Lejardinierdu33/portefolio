@@ -111,6 +111,7 @@
   /* Affichage du bouton du menu hamburger */
 .nav {
   justify-content: space-between;
+  width: 100%;
 }
 
   .icons_burger {
